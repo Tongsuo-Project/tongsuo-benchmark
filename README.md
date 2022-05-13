@@ -1,4 +1,4 @@
-# babassl-benchmark 相关脚本
+# babassl-benchmark 相关脚本说明
 ## Dockerfile
 这个是 github actions self-hosted runner 镜像的 dockerfile，build 命令：
 ```

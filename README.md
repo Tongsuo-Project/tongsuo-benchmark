@@ -48,3 +48,6 @@ optional arguments:
                         mysql port
 ```
 这个文件在 github actions workflow 中会调用。详情参考：https://github.com/BabaSSL/BabaSSL/actions/workflows/speed-test.yml
+
+## babassl-speed-result.sql
+speed_parse.py 脚本解析文本文件后保存到 mysql 数据库的表结构 SQL，可以在阿里云 RDS 产品中创建数据库并执行该 SQL 来创建表。

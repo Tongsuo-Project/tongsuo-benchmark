@@ -1,4 +1,4 @@
-# babassl-benchmark 相关脚本说明
+# tongsuo-benchmark 相关脚本说明
 ## Dockerfile
 这个是 github actions self-hosted runner 镜像的 dockerfile，build 命令：
 ```
@@ -7,13 +7,13 @@ docker build . -t github-actions-runner
 
 docker 容器启动命令：
 ```
-docker run --rm -e GITHUB_PAT="$GITHUB_PAT" -e GITHUB_REPO_NAME="BabaSSL/BabaSSL" --cpus=1 --memory=1G -it github-actions-runner
+docker run --rm -e GITHUB_PAT="$GITHUB_PAT" -e GITHUB_REPO_NAME="Tongsuo-Project/Tongsuo" --cpus=1 --memory=1G -it github-actions-runner
 ```
 其中，`$GITHUB_PAT`是 github 的 Personal Access Tokens 变量，需要在 github -> Settings -> Developer settings -> Personal access tokens，然后设置到变量 `$GITHUB_PAT` 中。
 entrypoint.sh 和 runsvc.sh 是 Dockerfile 的 entrypoint 执行脚本。
 
 ## speed_parse.py
-这个是解析 babassl speed 结果并保存到 mysql 数据库的 python 脚本，用法参数如下：
+这个是解析 tongsuo speed 结果并保存到 mysql 数据库的 python 脚本，用法参数如下：
 ```
 # python3 ./speed_parse.py -h
 usage: speed_parse.py [-h] [-c COMMIT] [-l LAST_COMMIT] [-d DATE]
@@ -23,7 +23,7 @@ usage: speed_parse.py [-h] [-c COMMIT] [-l LAST_COMMIT] [-d DATE]
                       --mysql-password MYSQL_PASSWORD --mysql-db MYSQL_DB
                       [--mysql-port MYSQL_PORT]
 
-Parsing babassl speed test result and saving to the rds
+Parsing tongsuo speed test result and saving to the rds
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -47,7 +47,7 @@ optional arguments:
   --mysql-port MYSQL_PORT
                         mysql port
 ```
-这个文件在 github actions workflow 中会调用。详情参考：https://github.com/BabaSSL/BabaSSL/actions/workflows/speed-test.yml
+这个文件在 github actions workflow 中会调用。详情参考：https://github.com/Tongsuo-Project/Tongsuo/actions/workflows/speed-test.yml
 
-## babassl-speed-result.sql
+## tongsuo-speed-result.sql
 speed_parse.py 脚本解析文本文件后保存到 mysql 数据库的表结构 SQL，可以在阿里云 RDS 产品中创建数据库并执行该 SQL 来创建表。

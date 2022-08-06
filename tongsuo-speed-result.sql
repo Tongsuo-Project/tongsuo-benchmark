@@ -1,5 +1,5 @@
 /******************************************/
-/*   DatabaseName = babassl-benchmark   */
+/*   DatabaseName = tongsuo-benchmark   */
 /*   TableName = digest   */
 /******************************************/
 CREATE TABLE `digest` (
@@ -20,7 +20,7 @@ CREATE TABLE `digest` (
 ;
 
 /******************************************/
-/*   DatabaseName = babassl-benchmark   */
+/*   DatabaseName = tongsuo-benchmark   */
 /*   TableName = key_exchange   */
 /******************************************/
 CREATE TABLE `key_exchange` (
@@ -37,7 +37,7 @@ CREATE TABLE `key_exchange` (
 ;
 
 /******************************************/
-/*   DatabaseName = babassl-benchmark   */
+/*   DatabaseName = tongsuo-benchmark   */
 /*   TableName = phe   */
 /******************************************/
 CREATE TABLE `phe` (
@@ -59,7 +59,7 @@ CREATE TABLE `phe` (
 ;
 
 /******************************************/
-/*   DatabaseName = babassl-benchmark   */
+/*   DatabaseName = tongsuo-benchmark   */
 /*   TableName = signature   */
 /******************************************/
 CREATE TABLE `signature` (
@@ -78,7 +78,7 @@ CREATE TABLE `signature` (
 ;
 
 /******************************************/
-/*   DatabaseName = babassl-benchmark   */
+/*   DatabaseName = tongsuo-benchmark   */
 /*   TableName = symmetric_encryption   */
 /******************************************/
 CREATE TABLE `symmetric_encryption` (

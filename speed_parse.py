@@ -7,7 +7,7 @@ import parse
 import pymysql
 
 now=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-parser = argparse.ArgumentParser(description='Parsing babassl speed test result and saving to the rds')
+parser = argparse.ArgumentParser(description='Parsing tongsuo speed test result and saving to the rds')
 parser.add_argument('-c', '--commit', help='git my commit id')
 parser.add_argument('-l', '--last_commit', help='git last commit id')
 parser.add_argument('-d', '--date', help='speed test date, for example: 2022-02-11 11:22:33')
